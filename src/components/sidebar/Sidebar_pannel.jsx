@@ -14,29 +14,37 @@ const Sidebar_pannel = () => {
       <hr />
       <div className="center">
         <ul>
+          <p className="title">Main</p>
           <li>
-            <HomeIcon />
+            <HomeIcon  className='icon'/>
             <span>Home</span>
           </li>
+          <p className="title">Login</p>
           <li>
-            <LoginIcon />
+            <LoginIcon className='icon' />
             <span>Login</span>
           </li>
+          <p className="title">User Pannel</p>
           <li>
-            <PersonIcon />
+            <PersonIcon className='icon' />
             <span>User</span>
           </li>
+          <p className="title">Documentation</p>
           <li>
-            <SummarizeIcon />
+            <SummarizeIcon className='icon' />
             <span>Report</span>
           </li>
+          <p className="title">Setting</p>
+
           <li>
-            <SettingsIcon />
+            <SettingsIcon className='icon' />
             <span>Settings</span>
           </li>
         </ul>
       </div>
-      <div className="bottom">Theme</div>
+
+      {/* Theme pannel */}
+      {/* <div className="bottom">Theme</div> */}
     </div>
 
   )

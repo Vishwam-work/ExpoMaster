@@ -5,8 +5,12 @@ import Sidebar_pannel from '../../components/sidebar/Sidebar_pannel'
 const Home = () => {
   return (
     <div className='home-head'>
-      <Sidebar_pannel/>
-      <div className="homeContainer">Container</div>
+      <Sidebar_pannel />
+
+      <div className="homeContainer">
+        <Navbar />
+        Container
+        </div>
     </div>
   )
 }
