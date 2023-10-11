@@ -1,0 +1,25 @@
+.widgets{
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    padding: 18px;
+    -webkit-box-shadow:2px 4px 10px 1px rgba(0,0,0,0.47);
+    box-shadow:2px 4px 10px 1px rgba(201,201,201,0.47);
+    height: 100px;
+    .left , .right{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .title,.titler{
+            font-weight: bold;
+     
+            color: rgb(128, 128, 128);
+           
+        }
+        .icon{
+            font-size: 50px;
+            color:#734ff3;
+        }
+    }
+
+}

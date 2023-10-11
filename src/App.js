@@ -1,5 +1,5 @@
 import Home from "./pages/home/Home-sceen";
-import Login from "./pages/login/Login";
+import Performa from "./pages/performa/Performa";
 import Userlist from "./pages/userlist/Userlist";
 import Report from "./pages/report/Report"
 import Single_user from "./pages/singleuser/Single_user";
@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/">
             <Route index element={<Home />} />
-            <Route path="login" element={<Login />} />
+            <Route path="performa" element={<Performa />} />
             <Route path="user-list" >
               <Route index element={<Userlist />} />
               <Route path=":userId" element={<Single_user />} />
