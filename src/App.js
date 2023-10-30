@@ -1,5 +1,6 @@
 import Home from "./pages/home/Home-sceen";
 import Performa from "./pages/performa/Performa";
+import Performa_form from "./components/forms/Performa_form";
 import Userlist from "./pages/userlist/Userlist";
 import Report from "./pages/report/Report"
 import Single_user from "./pages/singleuser/Single_user";
@@ -16,6 +17,7 @@ function App() {
           <Route path="/">
             <Route index element={<Home />} />
             <Route path="performa" element={<Performa />} />
+            <Route path="performaDocs" element={<Performa_form />} />
             <Route path="user-list" >
               <Route index element={<Userlist />} />
               <Route path=":userId" element={<Single_user />} />

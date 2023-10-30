@@ -10,5 +10,18 @@
             margin-right: 20px;
 
         }
+        .maincontainer{
+            margin-bottom: 50px;
+            label{
+                width: 100%;
+              
+            }
+        }
     }
+}
+.fade {
+    z-index: 999  !important;
+}
+.show{
+    z-index: 999  !important;
 }

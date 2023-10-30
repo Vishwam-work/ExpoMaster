@@ -12,7 +12,7 @@ const Sidebar_pannel = () => {
     <div className='sidebar'>
       <div className="top">
       <Link to="/" style={{textDecoration:"none"}}>
-        <span className='logo'>Logoadmin</span>
+        <span className='logo'>EXPOMASTER</span>
       </Link>
       </div>
       <hr />
