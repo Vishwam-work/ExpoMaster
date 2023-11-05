@@ -6,40 +6,33 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import axios from 'axios';
 
-export default function PortModal() {
+export default function DocumentModal() {
 
-    const inputRef = useRef(null);
     const [show, setShow] = useState(false);
     const [newOption, setNewOption] = useState('');
 
-    const [country, setCountry] = useState('');
-    const [port, setPort] = useState('');
+    const [document, setDocument] = useState('');
 
-    function handleCountry(e) {
-        const getcountryname = e.target.options[e.target.selectedIndex].getAttribute("name");
-        setCountry(getcountryname)
-    }
 
     const handleClose = () => {
         setShow(false);
         window.location.reload();
         setNewOption('');
     };
-    const handleNewPort = () => {
-        setPort(inputRef.current.value)
-    }
 
     const handleShow = () => setShow(true);
     const handleAddOption = () => {
-        const newOption = `${port}-${country}`;
+        const newOption = document;
 
         if (newOption.trim() !== '') {
             // onAddOption(newOption); // Call the callback to add the new option to the main page state
-            var performa_values = { port, country }
-            console.log('Port data:', performa_values);
-            axios.post('http://127.0.0.1:8000/expo/port_add/', performa_values)
+            var document_values = { document }
+            console.log('doc data:', document_values);
+            
+            axios.post('http://127.0.0.1:8000/expo/documentadd/', document_values)
                 .then(response => {
                     // Handle the response from the server
+
                     console.log('API response:', response.data);
 
                     handleClose();
@@ -61,25 +54,12 @@ export default function PortModal() {
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title><h2>Add Port</h2></Modal.Title>
+                    <Modal.Title><h2>Add Documents</h2></Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    {
-                        <label>
-                            Country
-                            <select name="country" className="form-control" onChange={(e) => { handleCountry(e) }} >
-                                <option> --Select the country -- </option>
-                                {
-                                    CountryData.map((getcountry, index) => (
-                                        <option name={getcountry.country_name} value={getcountry.country_id} key={index}>{getcountry.country_name}</option>
-                                    ))
-
-                                }
-                            </select>
-                        </label>}
                     <label>
-                        Name of port:
-                        <input type="text" name="port" className="form-control" value={port} onChange={(e) => setPort(e.target.value)} placeholder="Enter new option" />
+                        Name of Documents:
+                        <input type="text" name="doc" className="form-control" value={document} onChange={(e) => setDocument(e.target.value)}/>
                     </label>
 
                 </Modal.Body>
