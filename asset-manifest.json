@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ExpoMaster/static/css/main.b13bbf32.css",
+    "main.js": "/ExpoMaster/static/js/main.17816b08.js",
+    "index.html": "/ExpoMaster/index.html",
+    "main.b13bbf32.css.map": "/ExpoMaster/static/css/main.b13bbf32.css.map",
+    "main.17816b08.js.map": "/ExpoMaster/static/js/main.17816b08.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b13bbf32.css",
+    "static/js/main.17816b08.js"
+  ]
+}
